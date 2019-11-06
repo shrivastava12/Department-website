@@ -1,0 +1,196 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  
+
+
+  <link href="https://fonts.googleapis.com/css?family=Caveat&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Satisfy&display=swap}" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Bitter&display=swap" rel="stylesheet">
+  <link rel= "stylesheet" href="{% static 'bootstrap.min.css' %}">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="{% static 'style.css' %}">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" >
+
+
+</head>
+<style>
+ 
+</style>
+<body>
+ 
+<!--------------header-------------->
+<div class="container-fluid navbar-dark bg-dark hidden-md-down sticky-top">
+  <div class="row">
+    
+    <div class="col-lg-3 justify-content-center nav">
+      <img src="/static/img/logo.png" class="" height="60px" width="100" style="padding:5px;">
+    </div>
+    <div class="col-lg-9">
+        <ul class="nav justify-content-end   ">
+      
+            <li class="nav-item " >
+                <a id="hvr" class="nav-link " href="{% url 'index' %}" style="color: white; font-size:20px;">Home</a>
+              </li>
+              <li class="nav-item">
+                <a id="hvr" class="nav-link " href="{% url 'login' %}" style="color: white; font-size:20px;">Student</a>
+              </li>
+              <li class="nav-item">
+                <a id="hve" class="nav-link" href="{% url 'syllabus' %}" style="color: white; font-size:20px;">Syllabus</a>
+              </li>
+              <li class="nav-item">
+                  <a id="hve" class="nav-link" href="{% url 'team' %}" style="color: white; font-size:20px;">Developer</a>
+                </li>
+                <li class="nav-item">
+                  <a id="hve" class="nav-link" href="{% url 'teacher_profile' %}" style="color: white; font-size:20px;">Faculty</a>
+                </li>
+              <li class="nav-item">
+                <a id="hvr" class="nav-link" href="#" tabindex="-1" aria-disabled="true" style="color: red;font-size: 20px;">About Us</a>
+              </li>
+        </ul>
+    </div>
+  </div>
+</div>
+  
+<div class="sticky-top navbar-dark bg-dark hidden-lg-up text-center">
+    <ul class="nav   ">
+      
+        <li class="nav-item text-center" >
+            <a id="hvr" class="nav-link " href="{% url 'index' %}" style="color: white; font-size:20px;">Home</a>
+          </li>
+          <li class="nav-item">
+            <a id="hvr" class="nav-link " href="{% url 'login' %}" style="color: white; font-size:20px;">Student</a>
+          </li>
+          <li class="nav-item">
+            <a id="hve" class="nav-link" href="{% url 'syllabus' %}" style="color: white; font-size:20px;">Syllabus</a>
+          </li>
+          <li class="nav-item">
+              <a id="hve" class="nav-link" href="{% url 'team' %}" style="color: white; font-size:20px;">Developer</a>
+            </li>
+            <li class="nav-item">
+              <a id="hve" class="nav-link" href="{% url 'teacher_profile' %}" style="color: white; font-size:20px;">Faculty</a>
+            </li>
+          <li class="nav-item">
+            <a id="hvr" class="nav-link" href="#" tabindex="-1" aria-disabled="true" style="color: red;font-size: 20px;">About Us</a>
+          </li>
+    </ul>
+     
+   </div> 
+
+
+
+
+
+
+<!-----End header-------------->
+
+     <header class="d-flex align-items-center d-flex justify-content-center hidden-md-down">
+         
+        <h3 style="font-family: 'Bevan', cursive; color:white; text-shadow :1px, 1px, 1px ,1px moccasin; font-size:40px;">Welcome To The Department of Information Technology</h3><br>
+        <small style="color: white;;"></small>
+      
+  </header>
+  <header class="d-flex align-items-center d-flex justify-content-center hidden-lg-up">
+      <h4 style="font-family: 'Bevan', cursive; color:white; text-shadow:2px 2px 2px 2px slategrey;">Welcome To The Department of Information Technology</h4><br>
+      <small style="color: white;;"></small>
+  </header>
+  
+ <!-- <div class="container about_us">
+    <h2 id="even" style="float: left; color:rgb(32, 32, 238);" >Deaprtment 0f Information technology</h2>
+    <br><br><br>
+    <hr width="60%" style="float: left; border: 2px solid rgb(198, 50, 228); border-radius:50%"><br><br><br>
+    <p class="lorem">
+      ipsum dolor sit amet consectetur adipisicing elit. Ullam mollitia quidem tempora! Neque, ipsa quod quam sed illo perspiciatis distinctio in debitis ea eius? Nam et nisi aperiam vero accusantium!
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo similique earum ullam eum quaerat totam necessitatibus iusto temporibus? Eos ab tempora vero reiciendis ipsum dicta culpa. Ab odit explicabo quibusdam!
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt perferendis maxime asperiores libero aliquam aliquid doloremque quisquam. Cupiditate quam voluptas, enim nesciunt distinctio veniam mollitia ad quaerat vitae quos nisi.
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quos necessitatibus iusto obcaecati fuga ea blanditiis eveniet dolorum tenetur voluptates reprehenderit, quam a quia. Dolor nesciunt neque et dignissimos. Nostrum, officiis.
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim ipsum illum possimus quod perferendis obcaecati expedita. Officiis labore quibusdam, libero corrupti, placeat blanditiis modi unde, rerum asperiores similique nisi numquam.
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quo, nulla. Quam, vel? Ducimus accusantium obcaecati at aperiam asperiores id ipsum esse corrupti quam? Modi porro est inventore! Iure, repellat at!
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis rerum vero minima perspiciatis dolores quas harum quasi, neque placeat quos quisquam earum, possimus vel non obcaecati, optio laudantium soluta ullam.
+
+    </p>
+    
+</div>--->
+<div class="container">
+  <h2 class="mt-2 text-center" style="color:rgb(32,32,238); font-family: 'Times New Roman', Times, serif; font-size:38px; ">Department of Information Technology</h2>
+  <hr width="80%" ">
+  <h4  style=" color:darkorchid;font-size :24px;  font-family: 'sans-serif';">The college has been started ,Bachelor of Science in information technology from current session (2011-2014)
+    <br>
+    The academic programme for the BSC-IT is basically designed for those who want to develop their management potential and acquire technological acumen,knowledge 
+    and skills .The course design includes regular class room teaching ,lab work, workshop , seminars and guest lectures by academicians and professionals
+    along with demonstation/field visits.<br>
+    This course will help the participants to develop deeper and wider understanding of real situation.<br>
+    We are committed equally yo qnsure quality of education.
+  </h4>
+  <h2 style="font-size:24px;">Eligibility:</h2>
+  <h4 style=" color:darkorchid;font-size :24px;  font-family: 'sans-serif';">Minimum requirement for admission to this course is intermidiate or 10+2 , or its equivalent with mathematics as distinct subject.</h4>
+</div>
+    
+    
+
+<!---footer-->
+
+<div class="footer-basic" style="background-color: white  ;">
+    <footer style="background-color: white; color:black;">
+        <div class="social"><a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-dribbble"></i></a><a href="#"><i class="fa fa-behance"></i></a></div>
+        <ul class="list-inline">
+            <li class="list-inline-item"><a href="#">Home</a></li>
+            <li class="list-inline-item"><a href="#">Services</a></li>
+            <li class="list-inline-item"><a href="#">About</a></li>
+            <li class="list-inline-item"><a href="#">Terms</a></li>
+            <li class="list-inline-item"><a href="#">Privacy Policy</a></li>
+        </ul>
+        <p class="copyright">Company Name © 2017</p>
+    </footer>
+  </div>
+  
+  <div class="footer-dark">
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 col-md-3 item">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="#">Web design</a></li>
+                        <li><a href="#">Development</a></li>
+                        <li><a href="#">Hosting</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-6 col-md-3 item">
+                    <h3>About</h3>
+                    <ul>
+                        <li><a href="#">Company</a></li>
+                        <li><a href="#">Team</a></li>
+                        <li><a href="#">Careers</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-6 item text">
+                    <h3>Company Name</h3>
+                    <p>Praesent sed lobortis mi. Suspendisse vel placerat ligula. Vivamus ac sem lacus. Ut vehicula rhoncus elementum. Etiam quis tristique lectus. Aliquam in arcu eget velit pulvinar dictum vel in justo.</p>
+                </div>
+                <div class="col item social">
+                    <a href="#"><i class="fa fa-facebook"></i></a>
+                                    <a href="#"><i class="fa fa-twitter"></i></a>
+                                    <a href="#"><i class="fa fa-dribbble"></i></a>
+                                    <a href="#"><i class="fa fa-behance"></i></a>
+                </div>
+            </div>
+            <p class="copyright">Devloped By Students of Bsc.IT 2018-2021 session</p>
+            <p class="copyright">Company Name © 2019</p>
+        </div>
+    </footer>
+  </div>
+
+  
+
+
+</body>
+</html>

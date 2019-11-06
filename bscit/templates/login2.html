@@ -1,0 +1,51 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Login</title>
+  <link rel="stylesheet" href="{% static 'style1.css' %}">
+  <link rel="stylesheet" href="{% static 'bootstrap.min.css' %}">
+  <link rel="stylesheet" href="{% static 'bootstrap.bundle.min.js' %}">
+  <link rel="stylesheet" href="{% static 'jquery.slim.min.js' %}">
+  <link rel="stylesheet" href="{% static 'all.css' %}">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+  
+    <div class="container">
+        <div class="row">
+          <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+            <div class="card card-signin my-5">
+              <div class="card-body">
+                <h5 class="card-title text-center">Student Login</h5>
+                <form class="form-signin" method="POST">
+                  {% csrf_token %}
+                  <div class="form-label-group">
+                    <input type="text" id="user" class="form-control"  placeholder="Username" name="user"required autofocus>
+                    <label for="user">Username</label>
+                    
+                  </div>
+    
+                  <div class="form-label-group">
+                    <input type="password" id="inputPassword" name="pas" class="form-control" placeholder="Password" required>
+                    <label for="inputPassword">Password</label>
+                  </div>
+    
+                  <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit">Login</button>
+                  <hr class="my-4">
+                  
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+</body>
+</html>

@@ -1,0 +1,230 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/css?family=Caveat&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Satisfy&display=swap}" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Bitter&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{% static 'bootstrap.min.css' %}">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="{% static 'style.css' %}">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+
+  <title>Syllabus</title>
+
+</head>
+<body>
+  
+
+  <!-----header section-->
+
+
+  <div class="container-fluid navbar-dark bg-dark hidden-md-down sticky-top">
+    <div class="row">
+      
+      <div class="col-lg-3 justify-content-center nav">
+        <img src="/static/img/logo.png" class="" height="60px" width="100" style="padding:5px;">
+      </div>
+      <div class="col-lg-9">
+          <ul class="nav justify-content-end   ">
+        
+              <li class="nav-item " >
+                  <a id="hvr" class="nav-link " href="#" style="color: white; font-size:20px;">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a id="hvr" class="nav-link " href="{% url 'login' %}" style="color: white; font-size:20px;">Student</a>
+                </li>
+                <li class="nav-item">
+                  <a id="hve" class="nav-link" href="#" style="color: red; font-size:20px;">Syllabus</a>
+                </li>
+                <li class="nav-item">
+                    <a id="hve" class="nav-link" href="{% url 'team' %}" style="color: white; font-size:20px;">Developer</a>
+                  </li>
+                  <li class="nav-item">
+                    <a id="hve" class="nav-link" href="{% url 'teacher_profile' %}" style="color: white; font-size:20px;">Faculty</a>
+                  </li>
+                <li class="nav-item">
+                  <a id="hvr" class="nav-link" href="{% url 'about_us' %}" tabindex="-1" aria-disabled="true" style="color: white;font-size: 20px;">About Us</a>
+                </li>
+          </ul>
+      </div>
+    </div>
+  </div>
+    
+  <div class="sticky-top navbar-dark bg-dark hidden-lg-up text-center">
+      <ul class="nav   ">
+        
+          <li class="nav-item text-center" >
+              <a id="hvr" class="nav-link " href="#" style="color: white; font-size:20px;">Home</a>
+            </li>
+            <li class="nav-item">
+              <a id="hvr" class="nav-link " href="{% url 'login' %}" style="color: white; font-size:20px;">Student</a>
+            </li>
+            <li class="nav-item">
+              <a id="hve" class="nav-link" href="#" style="color:red; font-size:20px;">Syllabus</a>
+            </li>
+            <li class="nav-item">
+                <a id="hve" class="nav-link" href="{% url 'team' %}" style="color: white; font-size:20px;">Developer</a>
+              </li>
+              <li class="nav-item">
+                <a id="hve" class="nav-link" href="{% url 'teacher_profile' %}" style="color: white; font-size:20px;">Faculty</a>
+              </li>
+            <li class="nav-item">
+              <a id="hvr" class="nav-link" href="{% url 'about_us' %}" tabindex="-1" aria-disabled="true" style="color: white;font-size: 20px;">About Us</a>
+            </li>
+      </ul>
+       
+     </div> 
+  
+  
+  
+
+  <!-----end of header------->
+      <!--------------header section--------->
+      <header class="d-flex align-items-center d-flex justify-content-center hidden-md-down">
+         
+        <h3 style="font-family: 'Bevan', cursive; color:white; text-shadow :1px, 1px, 1px ,1px moccasin; font-size:40px;">Welcome To The Department of Information Technology</h3><br>
+        <small style="color: white;;"></small>
+      
+      </header>
+      <header class="d-flex align-items-center d-flex justify-content-center hidden-lg-up">
+      <h4 style="font-family: 'Bevan', cursive; color:white; text-shadow:2px 2px 2px 2px slategrey;">Welcome To The Department of Information Technology</h4><br>
+      <small style="color: white;;"></small>
+      </header>
+
+
+        <div class="container mt-5" >
+          <h2 id="download">Download your syllabus</h2>
+        </div>
+
+
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-4 syll ">
+              <center>
+                <a id="lnk" href="/static/NIMCET Entrance Exam 2013.pdf" class="btn btn-primary" role="button">First Year Syllabus</a>
+              </center>
+            </div>
+            <div class="col-sm-4 syll">
+              <center>
+                <a id="lnk" href="#" class="btn btn-success" role="button">Second Year Syllabus</a>
+              </center>
+              </div>
+              <div class="col-sm-4 syll">
+                <center>
+                  <a id="lnk" href="#" class="btn btn-primary" role="button">Third Year Syllabus</a>
+                  </center>
+                </div>
+          </div>
+
+        </div>
+        
+        <div class="container-fluid">
+          <div class="row">
+              <div class="container-fluid">
+                  <h2 id="download">These are some best YouTube channel for programming....</h2>
+                </div>
+            <div class="col-lg-4">
+              <center>
+                  <div class="card" style="width:100;">
+                      <img class="card-img-top" src="/static/img/download1.jpg" alt="Card image" style="width:100%;height:236px">
+                  <div class="card-body">
+                      <h4 class="card-title">C Programming</h4>
+                      <p class="card-text">Some example text some example text. Jane Doe is an architect and engineer</p>
+                      <a target="_blank" href="https://www.youtube.com/watch?v=si-KFFOW2gw&list=PLNutulngj0C4X0xGmFpQSLXol_zDAiAwh" class="btn btn-danger btn-lg">YouTube</a>
+                    </div>
+                  </div>  
+            </center>
+            </div>
+            <div class="col-lg-4">
+              <center>
+                  <div class="card" style="width:100;">
+                      <img class="card-img-top" src="/static/img/download2.jpg" alt="Card image" style="width:100%">
+                      <div class="card-body">
+                          <h4 class="card-title">C++ programming</h4>
+                          <p class="card-text">Some example text some example text. Jane Doe is an architect and engineer</p>
+                          <a href="https://www.youtube.com/watch?v=l0qvxPPISuY&list=PLVlQHNRLflP8_DGKcMoRw-TYJJALgGu4J" class="btn btn-danger btn-lg">YouTube</a>
+                        </div>
+                      </div>  
+            </center>
+            </div>
+            <div class="col-lg-4">
+              <center>
+                  <div class="card" style="width:100;">
+                      <img class="card-img-top" src="/static/img/images.jpg" alt="Card image" style="width:100%">
+                      <div class="card-body">
+                          <h4 class="card-title">Java Programming</h4>
+                          <p class="card-text">Some example text some example text. Jane Doe is an architect and engineer</p>
+                          <a href="https://www.youtube.com/watch?v=WOUpjal8ee4&list=PLGwb7xZHg-oMv1pOlTHAqAEjw0EPALzlL" class="btn btn-danger btn-lg">YouTube</a>
+                        </div>
+                      </div>  
+              </center>
+            </div>
+          </div>
+        </div>
+        <!--------footer------->
+        <div class="footer-basic" style="background-color: white  ;">
+          <footer style="background-color: white; color:black;">
+              <div class="social"><a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-dribbble"></i></a><a href="#"><i class="fa fa-behance"></i></a></div>
+              <ul class="list-inline">
+                  <li class="list-inline-item"><a href="#">Home</a></li>
+                  <li class="list-inline-item"><a href="#">Services</a></li>
+                  <li class="list-inline-item"><a href="#">About</a></li>
+                  <li class="list-inline-item"><a href="#">Terms</a></li>
+                  <li class="list-inline-item"><a href="#">Privacy Policy</a></li>
+              </ul>
+              <p class="copyright">IT department © 2019</p>
+          </footer>
+        </div>
+        
+        <div class="footer-dark">
+          <footer>
+              <div class="container">
+                  <div class="row">
+                      <div class="col-sm-6 col-md-3 item">
+                          <h3>Quick Link</h3>
+                          <ul>
+                              <li><a href="#">An college patna</a></li>
+                              <li><a href="#">Patliputra university</a></li>
+                              <li><a href="#">UGC</a></li>
+                          </ul>
+                      </div>
+                      <div class="col-sm-6 col-md-3 item">
+                          <h3>About</h3>
+                          <ul>
+                              <li><a href="#">College</a></li>
+                              <li><a href="#">Team</a></li>
+                              <li><a href="#">Careers</a></li>
+                          </ul>
+                      </div>
+                      <div class="col-md-6 item text">
+                          <h3>About Collge</h3>
+                          <p>Praesent sed lobortis mi. Suspendisse vel placerat ligula. Vivamus ac sem lacus. Ut vehicula rhoncus elementum. Etiam quis tristique lectus. Aliquam in arcu eget velit pulvinar dictum vel in justo.</p>
+                      </div>
+                      <div class="col item social">
+                          <a href="#"><i class="fa fa-facebook"></i></a>
+                                          <a href="#"><i class="fa fa-twitter"></i></a>
+                                          <a href="#"><i class="fa fa-dribbble"></i></a>
+                                          <a href="#"><i class="fa fa-behance"></i></a>
+                      </div>
+                  </div>
+                  <p class="copyright">Devloped By Students of Bsc.IT 2018-2021 session</p>
+                  <p class="copyright">IT department An college 2019</p>
+              </div>
+          </footer>
+        </div>
+               <!-----------------Footer end------------------->
+               
+              
+               
+                
+       
+
+
+</body>
+</html>

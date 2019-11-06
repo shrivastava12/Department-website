@@ -1,0 +1,717 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Department</title>
+ <!--- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>--->
+  
+  <link href="https://fonts.googleapis.com/css?family=Source+Serif+Pro&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Caveat&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Satisfy&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{% static 'bootstrap.min.css' %}">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  
+  <link href="https://fonts.googleapis.com/css?family=Bitter&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=PT+Serif&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{% static 'style.css' %}">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+  
+<script>
+
+
+  function fn1()
+  {
+    alert("form is submitted");
+  }
+
+</script>
+
+
+
+ <link href="https://fonts.googleapis.com/css?family=Fredericka+the+Great&display=swap" rel="stylesheet">
+
+ <link href="https://fonts.googleapis.com/css?family=Bevan&display=swap" rel="stylesheet">
+ <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+
+</head>
+
+<body>
+
+
+
+
+    
+
+    <!-------------------------------Header area start------------------------------------->
+    
+    <div class="container-fluid navbar-dark bg-dark hidden-md-down sticky-top">
+    <div class="row">
+      
+      <div class="col-lg-3 justify-content-center nav">
+        <img src="/static/img/logo.png" class="" height="60px" width="100" style="padding:5px;">
+      </div>
+      <div class="col-lg-9">
+          <ul class="nav justify-content-end   ">
+        
+              <li class="nav-item " >
+                  <a id="hvr" class="nav-link " href="#" style="color: red; font-size:20px;">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a id="hvr" class="nav-link " href="{% url 'login' %}" style="color: white; font-size:20px;">Student</a>
+                </li>
+                <li class="nav-item">
+                  <a id="hve" class="nav-link" href="{% url 'syllabus' %}" style="color: white; font-size:20px;">Syllabus</a>
+                </li>
+                <li class="nav-item">
+                    <a id="hve" class="nav-link" href="{% url 'team' %}" style="color: white; font-size:20px;">Developer</a>
+                  </li>
+                  <li class="nav-item">
+                    <a id="hve" class="nav-link" href="{% url 'teacher_profile' %}" style="color: white; font-size:20px;">Faculty</a>
+                  </li>
+                <li class="nav-item">
+                  <a id="hvr" class="nav-link" href="{% url 'about_us' %}" tabindex="-1" aria-disabled="true" style="color: white;font-size: 20px;">About Us</a>
+                </li>
+          </ul>
+      </div>
+    </div>
+  </div>
+  
+  
+  <nav class="navbar navbar-dark bg-dark navbar-expand-lg hidden-lg-up navbar-light bg-light">
+     
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+            <a id="hvr" class="nav-link " href="#" style="color: red; font-size:20px;">Home</a>
+            <a id="hvr" class="nav-link " href="{% url 'login' %}" style="color: white; font-size:20px;">Student</a>
+            <a id="hve" class="nav-link" href="{% url 'syllabus' %}" style="color: white; font-size:20px;">Syllabus</a>
+            <a id="hve" class="nav-link" href="{% url 'team' %}" style="color: white; font-size:20px;">Developer</a>
+            <a id="hve" class="nav-link" href="{% url 'teacher_profile' %}" style="color: white; font-size:20px;">Faculty</a>
+            <a id="hvr" class="nav-link" href="{% url 'about_us' %}" tabindex="-1" aria-disabled="true" style="color: white;font-size: 20px;">About Us</a>
+        </div>
+      </div>
+    </nav>
+  
+  
+  
+  <!-----
+  <div class="sticky-top navbar-dark bg-dark hidden-lg-up text-center">
+      <ul class="nav   ">
+        
+          <li class="nav-item text-center" >
+              <a id="hvr" class="nav-link " href="#" style="color: red; font-size:20px;">Home</a>
+            </li>
+            <li class="nav-item">
+              <a id="hvr" class="nav-link " href="{% url 'login' %}" style="color: white; font-size:20px;">Student</a>
+            </li>
+            <li class="nav-item">
+              <a id="hve" class="nav-link" href="{% url 'syllabus' %}" style="color: white; font-size:20px;">Syllabus</a>
+            </li>
+            <li class="nav-item">
+                <a id="hve" class="nav-link" href="{% url 'team' %}" style="color: white; font-size:20px;">Developer</a>
+              </li>
+              <li class="nav-item">
+                <a id="hve" class="nav-link" href="{% url 'teacher_profile' %}" style="color: white; font-size:20px;">Faculty</a>
+              </li>
+            <li class="nav-item">
+              <a id="hvr" class="nav-link" href="{% url 'about_us' %}" tabindex="-1" aria-disabled="true" style="color: white;font-size: 20px;">About Us</a>
+            </li>
+      </ul>
+       
+     </div> -->
+ 
+
+
+    <header class="d-flex align-items-center d-flex justify-content-center hidden-md-down">
+         
+          <h3 style="font-family: 'Bevan', cursive; color:white; text-shadow :1px, 1px, 1px ,1px moccasin; font-size:40px;">Welcome To The Department of Information Technology</h3><br>
+          <small style="color: white;;"></small>
+        
+    </header>
+    <header class="d-flex align-items-center d-flex justify-content-center hidden-lg-up">
+        <h4 style="font-family: 'Bevan', cursive; color:white; text-shadow:2px 2px 2px 2px slategrey;">Welcome To The Department of Information Technology</h4><br>
+        <small style="color: white;;"></small>
+    </header>
+    
+    <!-------------------------------Header area end--------------------------------------->
+
+
+      <!--slider section-->
+    <!-- <div class="jumbotron text-center">
+      
+        <h1 id="hero" style=" text-shadow: 1px 1px 1px 1px rgb(231, 210, 210);" ><strong>Welcome to the department of Information technology</strong></h1>
+        <hr id="" width="80%">
+        
+        <p id="hero1" style="font-size: 40px;color:rgb(97, 14, 97);padding:20px">Anugrah Narayan college</p>
+
+        <marquee direction="right">
+          <h1 id="hero" >Department Foundation Day 12 Nov</h1>
+          </marquee>
+        
+
+    </div> -->
+
+
+
+  <!--end of section-->
+   
+     
+     
+        
+        
+        <!----------------Teacher section start---------------------->
+        <div class="container text-center mt-3">
+          <div class="header-text mt-5">
+            <h1>
+                Department Facilites</h1>
+              <p>
+                Department of Informatio Technology
+              </p>
+            
+          </div>
+          <div class="row mt-4">
+              <div class="col-lg-4" id="effect">
+                <div class="single-feature">
+                  <h3><i class="fas fa-tv"></i> Laboratory</h3>
+                  <hr>
+                  <p>Teh Faculties of inTeh Faculties of inTeh Faculties of inTeh Faculties of inTeh Faculties of inTeh Faculties of 
+                      Teh Faculties of inTeh Faculties of inTeh Faculties of in
+                  </p>
+                </div>
+
+              </div>
+              <div class="col-lg-4" id="effect">
+                  <div class="single-feature">
+                      
+                    <h3><i class="fas fa-baseball-ball"></i> Sports</h3>
+                    <hr>
+
+                      <p>Teh Faculties of inTeh Faculties of inTeh Faculties of inTeh Faculties of inTeh Faculties of inTeh Faculties of 
+                          Teh Faculties of inTeh Faculties of inTeh Faculties of in
+                      </p>
+                    </div>
+              </div> 
+              <div class="col-lg-4" id="effect">
+                  <div class="single-feature">
+                      
+                    <h3><img src="/static/img/rag.png" height="30px" width="30px"> Anti Ragging</h3>
+                    <hr>
+                      <p>Teh Faculties of inTeh Faculties of inTeh Faculties of inTeh Faculties of inTeh Faculties of inTeh Faculties of 
+                          Teh Faculties of inTeh Faculties of inTeh Faculties of in
+                      </p>
+                    </div>
+              </div>
+              <div class="col-lg-4" id="effect">
+                <div class="single-feature">
+                    
+                  <h3><i class="fas fa-book-reader"></i> Library</h3>
+                  <hr>
+                  
+                    <p>Teh Faculties of inTeh Faculties of inTeh Faculties of inTeh Faculties of inTeh Faculties of inTeh Faculties of 
+                        Teh Faculties of inTeh Faculties of inTeh Faculties of in
+                    </p>
+                  </div>
+            </div> 
+            <div class="col-lg-4" id="effect">
+              <div class="single-feature">
+                  
+                <h3><i class="fas fa-user"></i>Expert Faculties</h3>
+                <hr>
+                  <p>Teh Faculties of inTeh Faculties of inTeh Faculties of inTeh Faculties of inTeh Faculties of inTeh Faculties of 
+                      Teh Faculties of inTeh Faculties of inTeh Faculties of in
+                  </p>
+                </div>
+          </div> 
+          <div class="col-lg-4" id="effect">
+            <div class="single-feature">
+                
+              <h3><i class="fas fa-shield-alt"></i>NCC</h3>
+              <hr>
+                <p>Teh Faculties of inTeh Faculties of inTeh Faculties of inTeh Faculties of inTeh Faculties of inTeh Faculties of 
+                    Teh Faculties of inTeh Faculties of inTeh Faculties of in
+                </p>
+              </div>
+        </div> 
+          </div>
+        </div>
+        
+            <div class="container text-center mt-5">
+              <h3 class="hidden-md-down" style=" font-family: 'Fredericka the Great', cursive; color:black; font-size:50px;">Meet Our Faculties</h3>
+              <h3 class="hidden-lg-up" style=" font-family: 'Fredericka the Great', cursive; color:black;">Meet Our Faculties</h3>
+              <b><hr id=""  width="50%" style="border: 2px solid rgb(22, 22, 99); "></b>
+                <div class="owl-carousel owl-theme">
+                  <div class="row">
+
+                    <div class="col-lg-4">
+                      <div class="item">
+                          <div class="team-box">
+                            <div class="team-image">
+                              <img src="/static/img/anamika_ma'am.jpg" alt="" width="100" height="130px">
+                            </div>
+                            <h4>Anamika Shrivastava</h4>
+                            <h6 class="position">Assistant Professor</h6>
+                            <p>Lorem ipsum dolor sit amet, conseg sed do eiusmod temput laborelaborus ed sed do eiusmod tempo.</p>
+                          </div>
+                      </div>
+                    </div>
+
+                    <div class="col-lg-4">
+                        <div class="item">
+                            <div class="team-box">
+                              <div class="team-image">
+                                <img src="/static/img/PicsArt_03-01-12.04.56.jpg" alt="" width="100" height="100px">
+                              </div>
+                              <h4>Ram Kumar</h4>
+                              <h6 class="position">Assistant Professor</h6>
+                              <p>Lorem ipsum dolor sit amet, conseg sed do eiusmod temput laborelaborus ed sed do eiusmod tempo.</p>
+                            </div>
+                        </div>
+                      </div>
+
+                        <div class="col-lg-4">
+                          <div class="item">
+                              <div class="team-box">
+                                <div class="team-image">
+                                  <img src="/static/img/PicsArt_03-01-12.04.56.jpg" width="100" height="100px" alt="">
+                                </div>
+                                <h4>Abid Hasan</h4>
+                                <h6 class="position">Assistant Professor</h6>
+                                <p>Lorem ipsum dolor sit amet, conseg sed do eiusmod temput laborelaborus ed sed do eiusmod tempo.</p>
+                              </div>
+                          </div>
+                        </div>
+                  </div>
+
+                  <div class="row">
+
+                      <div class="col-lg-4">
+                        <div class="item">
+                            <div class="team-box">
+                              <div class="team-image">
+                                <img src="/static/img/PicsArt_03-01-12.04.56.jpg" width="100" height="100px" alt="">
+                              </div>
+                              <h4>Ravi Kumar Soni</h4>
+                              <h6 class="position">Assistant Professor</h6>
+                              <p>Lorem ipsum dolor sit amet, conseg sed do eiusmod temput laborelaborus ed sed do eiusmod tempo.</p>
+                            </div>
+                        </div>
+                      </div>
+  
+                      <div class="col-lg-4">
+                          <div class="item">
+                              <div class="team-box">
+                                <div class="team-image">
+                                  <img src="/static/img/PicsArt_03-01-12.04.56.jpg" width="100" height="100px" alt="">
+                                </div>
+                                <h4>Parmod Dubey</h4>
+                                <h6 class="position">Assistant Professor</h6>
+                                <p>Lorem ipsum dolor sit amet, conseg sed do eiusmod temput laborelaborus ed sed do eiusmod tempo.</p>
+                              </div>
+                          </div>
+                        </div>
+  
+                          <div class="col-lg-4">
+                            <div class="item">
+                                <div class="team-box">
+                                  <div class="team-image">
+                                    <img src="/static/img/PicsArt_03-01-12.04.56.jpg" width="100" height="100px" alt="">
+                                  </div>
+                                  <h4>Parkash kumar</h4>
+                                  <h6 class="position">Assistant Professor</h6>
+                                  <p>Lorem ipsum dolor sit amet, conseg sed do eiusmod temput laborelaborus ed sed do eiusmod tempo.</p>
+                                </div>
+                            </div>
+                          </div>
+                    </div>
+                </div>
+              </div>
+                 
+        <!-----------------Teacher section end----------------------->
+
+         
+          
+
+
+
+
+
+          <!-- //// -->
+
+          <!-- <div class="container-fluid">
+              <div class="row">
+                <div class="col-sm-6 hod">
+                  <h2 class="hodintro">Hod Desk</h2>
+                  <hr style="border: 2px solid rgb(198, 50, 228); border-radius:50%;width:70%">
+                  <h5 id="hodtext">
+                      Anugrah Narayan College Patna, popularly known by its acronym A. N. College, 
+                      is one of the oldest colleges of Bihar. At present it is one of the constituent 
+                      units of Patliputra University, however, it was established much before the establishment of University.
+                       college enjoys its splendid history of serving this planet through a very strong leverage of 
+                       education sector.
+  
+                      For me, it is a matter of great pride and pleasure to welcome you all from the desk of
+                       Head of department of such a
+                       prestigious college. This college was granted A++ grade in accreditation by NACC in the
+                        Third cycle. In the last month college has submitted SSR for NACC accreditation for IInd cycle.
+                      
+                      All the departments, regular and vocational, of college are doing well. Teachers and staff are 
+                      bound to cater educational needs of our students. Students are also performing well.
+                      
+  All the departments, regular and vocational, of college are doing well. Teachers and staff are bound to cater educational needs of our students. Students are also performing well. In 2018 students of Sociology and Mathematics earned Gold Medals at UG level. Our students have also earned pride for this college in social, cultural and sports activities. We prepare our young and energetic students for future such that they will always act like a powerful detergent to wash out the problems of place where they will stand as they do not know how to knee down before the problems....
+                  </h5>
+                </div>
+                <div class="col-sm-6 hod  ">
+                  <div class="container hod1">
+                    <img class="img-responsive hodimg justify-content-center " src="static/BeautyPlusMe_20180626125827_save.jpg">
+                  </div>
+                    
+                </div>
+              </div>
+            </div>
+          </div> -->
+          <div class="container">
+            <div class="text-center">
+              <h2 class="hodintro">Hod Desk</h2>
+                  <hr style="border: 2px solid rgb(198, 50, 228); border-radius:50%;width:70%">
+            </div>
+            <div class="row">
+              <div class="col-lg-6 col-sm-6 " style="  font-size: 18px;
+              text-align: center;
+              padding: 12px;
+              color: rgb(42, 45, 48);
+              font-family:serif;
+              text-indent: 10px;">
+                  Anugrah Narayan College Patna, popularly known by its acronym A. N. College, 
+                  is one of the oldest colleges of Bihar. At present it is one of the constituent 
+                  units of Patliputra University, however, it was established much before the establishment of University.
+                   college enjoys its splendid history of serving this planet through a very strong leverage of 
+                   education sector.
+
+                  For me, it is a matter of great pride and pleasure to welcome you all from the desk of
+                   Head of department of such a
+                   prestigious college. This college was granted A++ grade in accreditation by NACC in the
+                    Third cycle. In the last month college has submitted SSR for NACC accreditation for IInd cycle.
+                  
+                  All the departments, regular and vocational, of college are doing well. Teachers and staff are 
+                  bound to cater educational needs of our students. Students are also performing well.
+                  
+            ciology and Mathematics earned Gold Medals at UG level. Our students have also earned pride for this college in social, cultural and sports activities. We prepare our young and energetic students for future such that they will always act like a powerful detergent to wash out the problems of place where they will stand as they do not know how to knee down before the problems....
+              </div>
+              <div class="col-lg-6 col-sm-6">
+                  <img   src="static/img/BeautyPlusMe_20180626125827_save.jpg" width="100%" height="450px" style="padding:12px; border:1px solid blue;">
+              </div>
+
+            </div>
+        </div>
+        <div class="hidden-md-down">
+        <div id="carouselExampleIndicators " class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+              <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner" style="height: 450px;">
+              <div class="carousel-item active">
+                <img src="static/img/pic2.jpg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="static/img/pic3.jpg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="static/img/pic4.jpg" class="d-block w-100" alt="...">
+              </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+          </div>
+          <div class="hidden-lg-up">
+          <div id="carouselExampleIndicators " class="carousel slide" data-ride="carousel">
+              <ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+              </ol>
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="static/img/pic2.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                  <img src="static/img/pic3.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                  <img src="static/img/pic4.jpg" class="d-block w-100" alt="...">
+                </div>
+              </div>
+              <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+              </a>
+              <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+              </a>
+            </div>
+            </div>
+      
+ <!---<div class="conatiner">
+         <div class="row event ">
+           <div class="col-sm-5 " style="background-color: rgb(11, 3, 26) ">
+              <h2 id="even">Upcoming Event's</h2>
+              <div class=" container event1">
+
+                  <marquee direction = "up">
+                      <ul> 
+                    {% for Events in model %}
+                      
+                            <li><a style="color:white" href="{{ Events.document.url }}">{{ Events.description }}</a></li>
+                        
+                    {% endfor %} 
+                    </ul>
+                  </marquee>  
+              </div>
+           </div>
+           <div class="col-sm-5" style="background-color: rgb(11, 3, 26)">
+              <h2 id="even">News And Updates</h2>
+                <div class=" container event1">
+                  <marquee direction = "up">
+                      <ul>
+                        {% for notice in model1 %}
+                           
+                        <li><a style="color: white" href="{{ notice.pdf.url }}">{{ notice.reason }}</a></li>
+
+                        {% endfor %}
+                      </ul>
+                    </marquee>
+                </div>
+            </div>
+          </div>
+      </div>--
+    -->
+            <div class="navbar-dark bg-dark container-fluid text-center mt-3" style="height: ;">
+              <div class="row">
+              <div class="col-lg-6">
+                  <h2 id="even">News And Updates</h2>
+                  <hr style="background-color: white;">
+                <div class="container" style="height: 380px;">
+                  <marquee direction = "up" class="text-center">
+                      <ul>
+                        {% for notice in model1 %}
+                           
+                        <li><a style="color: white ;font-size:20px;" href="{{ notice.pdf.url }}">{{ notice.reason }}</a></li>
+
+                        {% endfor %}
+                      </ul>
+                    </marquee>
+                  </div>
+                  <hr style="background-color: white;">
+              </div>
+              <div class="col-lg-6">
+                <h2 id="even">Upcoming Event's</h2>
+                  <hr style="background-color: white;" />
+                <div class="container" style="height: 380px;">
+                  <marquee direction = "up" class="text-center">
+                      <ul> 
+                    {% for Events in model %}
+                      
+                            <li><a style="color:white; font-size: 20px;" href="{{ Events.document.url }}">{{ Events.description }}</a></li>
+                        
+                    {% endfor %} 
+                    </ul>
+                  </marquee>
+                </div>
+                <hr style="background-color: white;">
+              </div>
+            </div>
+            </div>
+        
+          
+      
+            <div class="container question mb-3">
+              <h1 id="teach">Ask Any Question</h1>
+              <hr width="50%" id="hori">
+              <div class="container">
+                <form method="POST">
+                  {% csrf_token %}
+                  <div class="form-group">
+                    <label for="name">Name</label>
+                    {{ form.name}}
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Email address</label>
+                    {{ form.emailid }}
+                    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                  </div>
+                  <div class="form-group">
+                    <label for="subject" >Subject</label>
+                    {{ form.subject }}
+                  </div>
+                  <div class="form-group">
+                   <label for="question" >Question</label>
+                    {{ form.answer }}
+                   <small id="questionhelp" class="form-text text-muted">We will try to answer your question within 24hr.</small>
+                  </div>
+                 
+                  
+                  <button onclick="fn1()" type="submit" class="btn btn-primary ">Submit</button>
+                </form>
+              </div>
+           </div>
+
+
+           <!-----------------------quotes of the day--------------------->
+           <div class="quotes">
+
+           </div>
+      
+       
+       
+<div class="testimonials-clean">
+  <div class="container">
+      <div class="intro">
+          <h2 class="text-center ">Developer's Team</h2>
+          <hr style="border: 2px solid rgb(198, 50, 228); border-radius:50%;width:70%">
+        
+      </div>
+      <div class="row people">
+          <div class="col-md-5 col-lg-3 item" >
+              <div class="box">
+                  <p class="description">Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu gravida. Aliquam varius finibus est.</p>
+              </div>
+              <div class="author"><img class="rounded-circle" src="/static/img/PicsArt_03-01-12.04.56.jpg" />
+                  <h5 class="name">Pankaj Shrivastava</h5>
+                  <p class="title">Student of Bsc.IT A.N. College</p>
+              </div>
+          </div>
+          <div class="col-md-5 col-lg-3 item">
+              <div class="box">
+                  <p class="description">Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu gravida. Aliquam varius finibus est..</p> </div>
+              <div class="author"><img class="rounded-circle" src="/static/img/gaurav.jpg" />
+                  <h5 class="name">Gaurav Singh</h5>
+                  <p class="title">Student of Bsc.IT A.N. College</p>
+              </div>
+          </div>
+          <div class="col-md-3 col-lg-3 item">
+              <div class="box">
+                  <p class="description">Aliquam varius finibus est, et interdum justo suscipit. Vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu.</p>
+              </div>
+              <div class="author"><img class="rounded-circle" src="/static/img/hemu.jpeg" />
+                  <h5 class="name">Hemant Kushwaha</h5>
+                  <p class="title">Student of Bsc.IT A.N. College</p>
+              </div>
+          </div>
+          <div class="col-md-4 col-lg-3 item">
+              <div class="box">
+                  <p class="description">Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu gravida. Aliquam varius finibus est.</p>
+              </div>
+              <div class="author"><img class="rounded-circle" src="/static/img/ashish.jpg" />
+                  <h5 class="name">Ashish Kumar</h5>
+                  <p class="title">Student of Bsc.IT A.N. College</p>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+
+
+<h2 class="text-center mt-4">Company</h2>
+<div class="brands">
+  <a href="#"><img src="/static/img/samsung.png" height="40px" width="100px" />
+    <img src="/static/img/tcs.jpg" height="40px" width="100px" />
+    <img src="/static/img/hp.png" height="40px" width="100px" />
+    <img src="/static/img/samsung.png" height="50px" width="100px" />
+    <img src="/static/img/samsung.png" height="50px" width="100px" /></a></div>
+
+<div class="map-clean">
+  <div class="container">
+      <div class="intro">
+          <h2 class="text-center">Location</h2>
+          
+      </div>
+  </div>
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3597.514965991779!2d85.10796485038642!3d25.621028883620863!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39ed5828bfe4bca1%3A0xad2756b5d8585f0b!2sAnugrah%20narayan%20college!5e0!3m2!1sen!2sin!4v1571641582040!5m2!1sen!2sin" width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+</div>
+
+
+<div class="footer-basic" style="background-color: white  ;">
+  <footer style="background-color: white; color:black;">
+      <div class="social"><a href="#"><i class="fab fa-facebook"></i>
+      </a><a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-dribbble"></i></a>
+      <a href="#"><i class="fab fa-behance"></i></a></div>
+      <ul class="list-inline">
+          <li class="list-inline-item"><a href="#">Home</a></li>
+          <li class="list-inline-item"><a href="#">Services</a></li>
+          <li class="list-inline-item"><a href="#">About</a></li>
+          <li class="list-inline-item"><a href="#">Terms</a></li>
+          <li class="list-inline-item"><a href="#">Privacy Policy</a></li>
+      </ul>
+      <p class="copyright">IT department © 2019</p>
+  </footer>
+</div>
+
+<div class="footer-dark">
+  <footer>
+      <div class="container">
+          <div class="row">
+              <div class="col-sm-6 col-md-3 item">
+                  <h3>Quick Link</h3>
+                  <ul>
+                      <li><a href="http://ancpatna.ac.in">An college patna</a></li>
+                      <li><a href="http://ppup.ac.in">Patliputra University</a></li>
+                      <li><a href="https://www.ugc.ac.in/">UGC</a></li>
+                  </ul>
+              </div>
+              <div class="col-sm-6 col-md-3 item">
+                  <h3>About</h3>
+                  <ul>
+                      <li><a href="#">College</a></li>
+                      <li><a href="#">Team</a></li>
+                      <li><a href="#">Careers</a></li>
+                  </ul>
+              </div>
+              <div class="col-md-6 item text">
+                  <h3>About College</h3>
+                  <p>Praesent sed lobortis mi. Suspendisse vel placerat ligula. Vivamus ac sem lacus. Ut vehicula rhoncus elementum. Etiam quis tristique lectus. Aliquam in arcu eget velit pulvinar dictum vel in justo.</p>
+              </div>
+              <div class="col item social">
+                  <a href="#"><i class="fab fa-facebook"></i></a>
+                                  <a href="#"><i class="fab fa-twitter"></i></a>
+                                  <a href="#"><i class="fab fa-dribbble"></i></a>
+                                  <a href="#"><i class="fab fa-behance"></i></a>
+              </div>
+          </div>
+          <p class="copyright">Devloped By Students of Bsc.IT Session 2018-2021</p>
+          <p class="copyright">IT department An collge © 2019</p>
+      </div>
+  </footer>
+</div>
+       <!-----------------Footer end------------------->
+       
+      
+       
+        
+    
+
+   
+   
+       <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+       <script src="https://kit.fontawesome.com/1ad2334d42.js">
+       </script>
+</body>
+</html>

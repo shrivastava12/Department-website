@@ -1,0 +1,157 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link href="https://fonts.googleapis.com/css?family=Caveat&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Satisfy&display=swap}" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Bitter&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{% static 'bootstrap.min.css' %}">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="{% static 'style.css' %}">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" >
+<style>
+    .white
+    {
+      color: black;
+      padding: 5px;
+      font-family: 'Lora', serif;
+    }
+    .white1
+    {
+      color: black;
+      padding: 10px;
+
+      font-family: monospace;
+    }
+</style>
+</head>
+<body>
+ <!------
+  {% if request.user.is_authenticated  %}
+  <h2>
+    {{ request.user.username }}
+    <p>{{ user.profile.city }}</p>
+    <p>{{ user.profile.mothers_name }}</p>
+    <img src="{{ user.profile.image.url}}">
+    <a href="{% url 'logout' %}"><button type="button" class="btn btn-primary">Logout</button></a>
+  </h2>
+  {% endif %}
+  <a href="{% url 'logout' %}">Logout</a>
+</body>
+</html>   ---->
+
+<!-----------------------------Desktop support start---------------------------->
+{% if request.user.is_authenticated %}
+
+
+<div class="container hidden-md-down" >
+    <div class="text-center">
+        <h3 style="color:firebrick;font-family:Arial, Helvetica, sans-serif;"><strong>Student Profile</strong></h3>
+      </div>
+      <hr style="background-color: black;">
+    <div class="row">
+  
+      <div class="col-lg-4 text-center" style="border-right:1px solid;">
+        <div class="d-flex justify-content-center">
+        <img class="img-thumbnail single-feature" src="{{user.profile.image.url}}" width="40%" style="border-radius: 50%;"></div>
+        <h4 class="mt-2">{{ request.user.username }}</h4>
+        <label>Bsc.IT</label>
+  {% csrf_token %}
+      </div>
+      <div class="col-lg-6 ">
+        <h4 class="white">Name:- <span>{{ user.profile.name }}</span></h4>
+        <h4 class="white">Email-id:-<span>{{ request.user.emailid }}</span></h4>
+        <h4 class="white">Mobile:- <span>{{ user.profile.mobile_no }}</span></h4>
+        <h4 class="white">College:-AN college Patna</h4>
+        <h4 class="white">Session:-2018-21</h4>
+        <h4 class="white">Course:-Bsc-it</h4>
+        <h4 class="white">Roll no:- <span>{{ user.profile.roll_number }}</span></h4>
+        <h4 class="white">City:- <span>{{ user.profile.city }}</span></h4>
+        <h4 class="white">Father's Name:- <span>{{ user.profile.fathers_name }}</span></h4>
+        <h4 class="white">Mother's Name:- <span>{{ user.profile.mothers_name }}</span></h4>
+      </div>
+    </div>
+    <hr style="background-color: black;">
+  
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="text-center">
+          <h3 style="font-family: monospace;">Dashboard</h3>
+        </div>
+        <hr style="background-color: black;">
+        <div class="text-center">
+          <h1>No Records Found.</h1>
+        </div>
+      </div>
+    </div>
+    <div class="text-center">
+      <hr style="background-color: black;">
+    <a href="{% url 'logout' %}"><button type="submit" class="btn btn-success" style="color: black;">Logout</button></a>
+    </div>
+  </div>
+  <!------------------------------Desktop support end--------------------------->
+  
+  
+  <!-----------------------For Mobile support start---------------------------->
+  <div class="container-fluid hidden-lg-up" style="background-color: linen;">
+    <div class="row">
+      <div class="col-lg-4 text-center" style="background-image: url('anc/img/background.jpg'); background-size: cover;">
+        <img src="{{user.profile.image.url}}" width="40%" style="border-radius: 50%; " class="mt-5 mb-5">
+      </div>
+      <div class="col-lg-8 single-feature">
+        <div class="container" style="font-family: 'Lora', serif; color: brown;">
+          <div class="text-center">
+            <h3 style="color: black; font-family: monospace;"><strong>Student Information</strong></h3>
+          </div>
+          <hr style="background-color: black; ">
+          <h4 class="white1">Name:- <span>{{ user.profile.name }}</span></h4>
+          <h4 class="white1">Email-id:-<span>{{ request.user.emailid }}</span></h4>
+          <h4 class="white1">Mobile:- <span>{{ user.profile.mobile_no }}</span></h4>
+          <h4 class="white1">College:-AN college Patna</h4>
+          <h4 class="white1">Session:-2018-21</h4>
+          <h4 class="white1">Course:-Bsc-it</h4>
+          <h4 class="white1">Roll no:- <span>{{ user.profile.roll_number }}</span></h4>
+          <h4 class="white1">City:- <span>{{ user.profile.city }}</span></h4>
+          <h4 class="white1">Father's Name:- <span>{{ user.profile.fathers_name }}</span></h4>
+          <h4 class="white1">Mother's Name:- <span>{{ user.profile.mothers_name }}</span></h4>
+        </div>
+      </div>
+    </div>
+    <hr style="background-color: black;">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class=" text-center">
+          <h3 style="color: black; font-family: monospace;"><strong>Dashboard</strong></h3>
+        </div>
+        <hr style="background-color: black;">
+      </div>
+    </div>
+    <div class="text-center">
+      <h3>No Record Found.</h3>
+    </div>
+    <br>
+    <br>
+    <div class="text-center">
+      <a href="{% url 'logout' %}"><button type="submit" class="btn btn-success
+      " style=" color: black;">Logout</button></a>
+    </div>
+  </div>
+  <!-------------------------Mobile support end-------------------------------------->
+  {% endif %}
+
+  
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+</body>
+</html>

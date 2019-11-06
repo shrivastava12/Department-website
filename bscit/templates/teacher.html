@@ -1,0 +1,252 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Faculty Member</title>
+  <link href="https://fonts.googleapis.com/css?family=Caveat&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Satisfy&display=swap}" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Bitter&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{% static 'bootstrap.min.css' %}">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="{% static 'style.css' %}">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" >
+</head>
+
+<body>
+<!--header-->
+<div class="container-fluid navbar-dark bg-dark hidden-md-down sticky-top">
+  <div class="row">
+    
+    <div class="col-lg-3 justify-content-center nav">
+      <img src="/static/img/logo.png" class="" height="60px" width="100" style="padding:5px;">
+    </div>
+    <div class="col-lg-9">
+        <ul class="nav justify-content-end   ">
+      
+            <li class="nav-item " >
+                <a id="hvr" class="nav-link " href="#" style="color: white; font-size:20px;">Home</a>
+              </li>
+              <li class="nav-item">
+                <a id="hvr" class="nav-link " href="{% url 'login' %}" style="color: white; font-size:20px;">Student</a>
+              </li>
+              <li class="nav-item">
+                <a id="hve" class="nav-link" href="{% url 'syllabus' %}" style="color: white; font-size:20px;">Syllabus</a>
+              </li>
+              <li class="nav-item">
+                  <a id="hve" class="nav-link" href="{% url 'team' %}" style="color: white; font-size:20px;">Developer</a>
+                </li>
+                <li class="nav-item">
+                  <a id="hve" class="nav-link" href="#" style="color: red; font-size:20px;">Faculty</a>
+                </li>
+              <li class="nav-item">
+                <a id="hvr" class="nav-link" href="{% url 'about_us' %}" tabindex="-1" aria-disabled="true" style="color: white;font-size: 20px;">About Us</a>
+              </li>
+        </ul>
+    </div>
+  </div>
+</div>
+  
+<div class="sticky-top navbar-dark bg-dark hidden-lg-up text-center">
+    <ul class="nav   ">
+      
+        <li class="nav-item text-center" >
+            <a id="hvr" class="nav-link " href="{% url 'index' %}" style="color: white; font-size:20px;">Home</a>
+          </li>
+          <li class="nav-item">
+            <a id="hvr" class="nav-link " href="{% url 'login' %}" style="color: white; font-size:20px;">Student</a>
+          </li>
+          <li class="nav-item">
+            <a id="hve" class="nav-link" href="{% url 'syllabus' %}" style="color: white; font-size:20px;">Syllabus</a>
+          </li>
+          <li class="nav-item">
+              <a id="hve" class="nav-link" href="{% url 'team' %}" style="color: white; font-size:20px;">Developer</a>
+            </li>
+            <li class="nav-item">
+              <a id="hve" class="nav-link" href="#" style="color: red; font-size:20px;">Faculty</a>
+            </li>
+          <li class="nav-item">
+            <a id="hvr" class="nav-link" href="{% url 'about_us' %}" tabindex="-1" aria-disabled="true" style="color: white;font-size: 20px;">About Us</a>
+          </li>
+    </ul>
+     
+   </div> 
+
+
+
+
+
+<!---- header section---->
+
+      <header class="d-flex align-items-center d-flex justify-content-center hidden-md-down">
+         
+      <h3 style="font-family: 'Bevan', cursive; color:white; text-shadow :1px, 1px, 1px ,1px moccasin; font-size:40px;">Welcome To The Department of Information Technology</h3><br>
+      <small style="color: white;;"></small>
+
+    </header>
+    <header class="d-flex align-items-center d-flex justify-content-center hidden-lg-up">
+    <h4 style="font-family: 'Bevan', cursive; color:white; text-shadow:2px 2px 2px 2px slategrey;">Welcome To The Department of Information Technology</h4><br>
+    <small style="color: white;;"></small>
+    </header>
+  <!----------------end block------------>
+
+
+  <!-- Start team Area -->
+  <section class="team-area section-gap team-page-teams" id="team">
+      <div class="container mt-5">
+        <div class="row d-flex justify-content-center">
+          <div class="menu-content pb-70 col-lg-8">
+            <div class="title text-center">
+              <h1 class="mt-1 ">Faculty Member</h1>
+              
+            </div>
+          </div>
+        </div>						
+        <div class="row justify-content-center d-flex align-items-center mb-4 mt-4">
+          <div class="col-lg-3 single-team">
+              <div class="thumb card" style="height: 350px;">
+                  <img class="img-fluid img-thumbnail card-img-top" src="/static/PicsArt_03-01-12.04.56.jpg"  alt="">
+               <div class="card-body">
+                  <div class="meta-text text-center">
+                      <h4>Anamika Shrivastava</h4>
+                      <p>Python Developer</p>									    	
+                    </div>
+                    <div class="align-items-center justify-content-center d-flex ">
+                        <a href="#"><i class="fa fa-facebook"></i></a>
+                        <a href="#"><i class="fa fa-twitter"></i></a>
+                        <a href="#"><i class="fa fa-linkedin"></i></a>
+                   </div>
+                  </div> 
+              </div>
+              
+          </div>
+          <div class="col-lg-3 single-team">
+              <div class="thumb card"  style="height: 350px;">
+                  <img class="img-fluid img-thumbnail card-img-top" src="/static/PicsArt_03-01-12.04.56.jpg" alt="">
+                 <div class="card-body">
+                  <div class="meta-text  text-center">
+                      <h4>Ram Kumar</h4>
+                      <p>Php Developer</p>			    	
+                    </div>
+                    <div class="align-items-center justify-content-center d-flex">
+                        <a href="#"><i class="fa fa-facebook"></i></a>
+                        <a href="#"><i class="fa fa-twitter"></i></a>
+                        <a href="#"><i class="fa fa-linkedin"></i></a>
+                    </div>
+                  </div>  
+              </div>
+             
+          </div>	
+
+          <div class="col-lg-3 single-team">
+          
+              <div class="thumb card"  style="height: 350px;">
+                  <img class="img-fluid img-thumbnail card-img-top" src="/static/PicsArt_03-01-12.04.56.jpg" alt="">
+                 <div class="card-body">
+                  <div class="meta-text  text-center">
+                      <h4>Abid Hasan</h4>
+                      <p>Web designer</p>			    	
+                    </div> 
+                    <div class="align-items-center justify-content-center d-flex">
+                        <a href="#"><i class="fa fa-facebook"></i></a>
+                        <a href="#"><i class="fa fa-twitter"></i></a>
+                        <a href="#"><i class="fa fa-linkedin"></i></a>
+                    </div>
+                   </div> 
+              </div>
+              
+          </div>	
+          <div class="col-lg-3 single-team">
+              <div class="thumb card" style="height: 350px;">
+                  <img class="img-fluid img-thumbnail card-img-top" src="/static/PicsArt_03-01-12.04.56.jpg" alt="">
+                 <div class="card-body">
+                  <div class="meta-text  text-center">
+                      <h4>Ravi Kumar Soni</h4>
+                      <p> Web designer </p> 		    	
+                    </div>
+                    <div class="align-items-center justify-content-center d-flex ">
+                        <a href="#" class="m-1"><i class="fa fa-facebook"></i></a>
+                        <a href="#"><i class="fa fa-twitter"></i></a>
+                        <a href="#"><i class="fa fa-linkedin"></i></a>
+                     </div>
+                 </div>
+                     
+                     
+              </div>
+             
+          </div>	
+
+
+
+         
+            
+              
+          </div>		
+          
+          	
+         
+         															
+        </div>
+      </div>	
+    </section>
+    <!-- End team Area -->		
+    <!---footer-->
+    <div class="footer-basic" style="background-color: white  ;">
+        <footer style="background-color: white; color:black;">
+            <div class="social"><a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-dribbble"></i></a><a href="#"><i class="fa fa-behance"></i></a></div>
+            <ul class="list-inline">
+                <li class="list-inline-item"><a href="#">Home</a></li>
+                <li class="list-inline-item"><a href="#">Services</a></li>
+                <li class="list-inline-item"><a href="#">About</a></li>
+                <li class="list-inline-item"><a href="#">Terms</a></li>
+                <li class="list-inline-item"><a href="#">Privacy Policy</a></li>
+            </ul>
+            <p class="copyright">It Department © 2019</p>
+        </footer>
+      </div>
+      
+      <div class="footer-dark">
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6 col-md-3 item">
+                        <h3>Quick Link</h3>
+                        <ul>
+                            <li><a href="#">An college</a></li>
+                            <li><a href="#">PPU</a></li>
+                            <li><a href="#">UGC</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-6 col-md-3 item">
+                        <h3>About</h3>
+                        <ul>
+                            <li><a href="#">College</a></li>
+                            <li><a href="#">Team</a></li>
+                            <li><a href="#">Careers</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6 item text">
+                        <h3>About College</h3>
+                        <p>Praesent sed lobortis mi. Suspendisse vel placerat ligula. Vivamus ac sem lacus. Ut vehicula rhoncus elementum. Etiam quis tristique lectus. Aliquam in arcu eget velit pulvinar dictum vel in justo.</p>
+                    </div>
+                    <div class="col item social">
+                        <a href="#"><i class="fa fa-facebook"></i></a>
+                                        <a href="#"><i class="fa fa-twitter"></i></a>
+                                        <a href="#"><i class="fa fa-dribbble"></i></a>
+                                        <a href="#"><i class="fa fa-behance"></i></a>
+                    </div>
+                </div>
+                <p class="copyright">Devloped By Students of Bsc.IT 2018-2021 session</p>
+                <p class="copyright">It Department An college © 2019</p>
+            </div>
+        </footer>
+      </div>
+             <!-----------------Footer end------------------->
+  
+</body>
+</html>
